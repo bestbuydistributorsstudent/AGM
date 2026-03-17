@@ -14,11 +14,6 @@ export const Route = createRootRoute({
         charSet: 'utf-8',
       },
       {
-        httpEquiv: 'Content-Security-Policy',
-        content: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
-
-      },
-      {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
       },
