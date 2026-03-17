@@ -13,6 +13,13 @@ export const Route = createRootRoute({
       {
         charSet: 'utf-8',
       },
+      { httpEquiv: 'Content-Security-Policy',
+content: `
+  default-src 'self';
+  script-src 'self' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+`.replace(/\n/g, '')},
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
